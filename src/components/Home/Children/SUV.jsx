@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Buses = () => {
+const SUV = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Buses = () => {
   )
 }
 
-export default Buses
+export default SUV

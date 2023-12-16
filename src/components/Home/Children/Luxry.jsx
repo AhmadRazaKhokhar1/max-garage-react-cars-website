@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Bikes = () => {
+const Luxry = () => {
   return (
     <div>
-      
+    
     </div>
   )
 }
 
-export default Bikes
+export default Luxry

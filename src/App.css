@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+.brandLogo{
+  font-weight: 900;
+  font-stretch: expanded;
+  letter-spacing: 1px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 2px 2px 2px rgb(45, 0, 75);
+  text-decoration: none;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a{
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.f{
+margin-left: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brand{
+  display: flex;
+  align-items: center;
+  border-left: 5px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  height: 5vh;
+  gap: 2px;
+  box-shadow: 5px 5px 10px rgb(15, 0, 39);
+  cursor: pointer;
+  margin-left: 35px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
+  padding: 10px;
+  height:13vh;
+  width: 100vw;
+  background: rgb(32, 0, 75);
+  color: white;
+  justify-content: space-between;
+  box-shadow: 15px 8px 20px rgb(38, 0, 99);
+  position: fixed;
+}
+.list{
+  display: flex;
+  width: 
+48vw;
+  justify-content: space-between;
+  list-style: none;
+}
+.lists{
+  display: flex;
+  width: 5vw;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 85px;
+}
+li{
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  margin-right: 10px;
+}
+li:hover{
+  color: rgb(61, 61, 255);
+  transform: translateY(-3px);
+}
+body{
+  caret-color: transparent;
+  overflow-x: hidden;
 }
