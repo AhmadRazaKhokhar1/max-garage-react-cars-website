@@ -53,7 +53,6 @@ const Sponsor = () => {
         </div>
         </Element>
       </div>
-      <hr />
     </div>
   )
 }

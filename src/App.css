@@ -250,13 +250,12 @@ hr{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .container-main{
   border: none;
   height: auto;
   display: flex;
-  width: 68vw;
+  width: 60vw;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -268,11 +267,14 @@ hr{
   margin: auto;
   background: rgba(199, 199, 199, 0.445);
   border-radius: 8px;
+  position: absolute;
+  margin-top: -450px;
+  padding: 0;
 }
+
 .lf{
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
-
 }
 .rh{
   border-bottom-right-radius: 8px;
@@ -292,22 +294,50 @@ hr{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 1;
+  flex: 2;
   align-items: center;
   justify-content: center;
+  position: static;
 }
 .rightForm{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-}
-.slider-main{
-  position: absolute;
+  position: static;
+  height: 50vh;
+  background: red;
 }
 
+.slider-main{
+  position: absolute;
+  background: rgb(0, 0, 128);
+  height: 75%;
+  width: 45vw;
+  color: #F5F1EE;
+  border-bottom-right-radius: 155px;
+  border-top-right-radius: 155px;
+  transition: 1s ease-in-out;
+  padding: 12px;
+  translate: -68px;
+  transform: translateY(-42px);
+  box-shadow: 5px 5px 15px black;
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  margin-top: 155px;
+}
+.active{
+  background: rgb(65, 65, 241);
+  color:  rgb(255, 255, 255);
+  border-bottom: 3px solid navy;
+}
 
 /* small product css  */
 .cardSmall{

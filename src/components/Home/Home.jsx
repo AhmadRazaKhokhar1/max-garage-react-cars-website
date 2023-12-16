@@ -50,7 +50,7 @@ const Home = () => {
           </div>
 
         <hr id="luxury"/>
-        <br />
+        
           <div  className='animated-div left-to-right'>
             <h1 className="titleMain">
               Luxry Cars
@@ -60,7 +60,7 @@ const Home = () => {
           
           <Element name='sports' className='element'></Element>
         <hr id="sports"/>
-        <br />
+        
           <div  className='animated-div right-to-left'>
           <h1 className="titleMain">
               Sports Cars
@@ -70,7 +70,7 @@ const Home = () => {
 
           <Element name='sedan' className='element'></Element>
         <hr id="sedan"/>
-        <br />
+        
           <div  className='animated-div left-to-right'>
           <h1 className="titleMain">
               Sedan Cars
@@ -80,7 +80,7 @@ const Home = () => {
 
          <Element name='trucks' className='element'></Element>
         <hr id="trucks"/>
-        <br />
+        
           <div  className='animated-div right-to-left'>
           <h1 className="titleMain">
               Trucks
@@ -90,7 +90,7 @@ const Home = () => {
 
           <Element name='suv' className='element'></Element>
         <hr id="suv"/>
-        <br />
+        
           <div  className='animated-div left-to-right'>
          <h1 className="titleMain">
               SUV Cars
@@ -100,7 +100,7 @@ const Home = () => {
 
           <Element name='contact' className='element'></Element>
         <hr id="contact"/>
-        <br />
+        
           <div  className='animated-div right-to-left'>
           <h1 className="titleMain">
             Contact US
@@ -111,7 +111,7 @@ const Home = () => {
 
           <Element name='signUp' className='element'></Element>
         <hr id="signUp"/>
-        <br />
+        
           <div  className='animated-div left-to-right'>
           <h1 className="titleMain">
             Join Us
