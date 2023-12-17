@@ -10,17 +10,20 @@ const ShowMore = ({ data, styles}) => {
    return <div className='moreInfo' style={styles} >
        
 
-       <div className="infoImageContainer"> <img src={e.image} alt={e.description} className='infoImage'/></div>
-       <div className="flex"> <div className="cardTitleLarge">title</div>{e.title}</div>
-       <div className="flex"> <div className="cardTitleLarge">Model</div>{e.model} {e.make}</div>
-       <div className="flex"> <div className="cardTitleLarge">Owner</div>{e.owner}</div>
-       <div className="flex"> <div className="cardTitleLarge">Mileage</div>{e.mileage}</div>
-       <div className="flex"> <div className="cardTitleLarge">Price</div>{e.currency}{e.price}</div>
-       <div className="flex"> <div className="cardTitleLarge">Loves</div>{e.likes}</div>
-       <div className="flex"> <div className="cardTitleLarge">Phone</div>{e.phone}</div>
-       <div className="flex"> <div className="cardTitleLarge">Location</div>{e.location}</div>
+        <div className="infoBody">
+            <div className="flex"> <div className="cardTitleLarge">Brand</div><div className="info">{e.title}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Model</div><div className="info">{e.model} {e.make}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Owner</div><div className="info">{e.owner}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Mileage</div><div className="info">{e.mileage}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Price</div><div className="info">{e.currency}{e.price}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Likes</div><div className="info">{e.likes}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">Location</div><div className="info">{e.location}</div></div>
+            <div className="flex"> <div className="cardTitleLarge">ID:</div><div className="info">{e.id}</div></div>
+            <div> <div className="cardTitleLarge">Description:</div><div className="info">{e.description}</div></div>
 
-</div>
+           
+        </div>
+      </div>
 
 })
 }

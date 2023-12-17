@@ -446,6 +446,13 @@ hr{
   border-radius: 12px;
   transform: translateY(35px);
 }
+.adminForm{
+  box-shadow: 5px 5px 25px black;
+  width: 60vw;
+  padding: 15px;
+  border-radius: 12px;
+  margin: auto;
+}
 
 /* Large Card CSS  */
 .largeCard{
@@ -480,26 +487,48 @@ hr{
   padding-right: 10px;
 }
 
+/* More Info card css  */
+.info {
+  font-size: 1rem;
+  color: #333;
+}
+.dd{
+  transition: 1s ease-in-out;
+}
 
-.moreInfo{
-  box-shadow: 585px 185px 585px rgb(0, 2, 37);
-  width: 70vw;
-  position: fixed;
-  z-index: 2;
-  margin-top: -1205px;
-  background: white !important;
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-}
-.infoImageContainer{
-  width: 70vw;
-  height: 50vh;
+.moreInfo {
+  width: 40vw;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 50px 45px 588px rgb(4, 0, 41);
   overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Optional: Add a smooth transition effect */
+  position: fixed;
+  z-index: 9999;
+  margin-top: -900px !important;
+  margin-left: 380px;
+  padding: 25px;
 }
-.infoImage{
-  width: 70vw;
-  height: 80vh;
-  position: inherit;
-  z-index: 1;
+
+.infoBody {
+  padding: 20px;
+  height: auto;
+}
+
+.info {
+  font-size: 1rem;
+  color: #555555;
+}
+
+
+.moreInfo.active {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+.cardInfo{
+  display: flex;
+  width: 90%;
+  justify-content:space-between ;
+  align-items: center;
+  margin: auto;
 }

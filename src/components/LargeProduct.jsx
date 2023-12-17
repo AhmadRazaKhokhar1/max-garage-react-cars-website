@@ -26,7 +26,7 @@ const LargeProduct = ({title, description,id, price, location, isFeatured, owner
   };
   passData()
 
-  const [styles, setStyles] = useState({display:'block'})
+  const [styles, setStyles] = useState({display:'none'})
 
     function showMoreInfo(){
       setStyles({display:'block'});
@@ -34,6 +34,16 @@ const LargeProduct = ({title, description,id, price, location, isFeatured, owner
     function hideMoreInfo(){
       setStyles({display:'none'});
     }
+
+    //
+    const [contacts, setContacts] = useState({display:'none'});
+const setDisplay = ()=>{
+  if( contacts.display === 'none'){
+    setContacts({display:'block'})
+  }else{
+    setContacts({display:'none'})
+  }
+}
     return (
     <>
         <div className='largeCard' id={id}>
@@ -69,27 +79,31 @@ const LargeProduct = ({title, description,id, price, location, isFeatured, owner
                 </div>
                 <div className="largeCardInfo flex">
                   <span className='cardTitleLarge'>
-                    Owner
+                    Price
                   </span>
                   <span className='infoContainer'>
-                     {owner}
+                     {price}{currency}
                   </span>
                 </div>
                
             </div>
-            <div className="flex cardInfo py-1 px-5">
-                <button className='btn-primary'>Contact</button>
-                <button className="seeElse" onClick={showMoreInfo} onBlur={hideMoreInfo}>See More &nbsp; &rarr;</button>
-            </div>
-        
-        </div>
-          
-         
+            <div className=" cardInfo  ">
+            <div className="flex " style={contacts}> <div className="cardTitleLarge">Phone</div><div className="info">{phone}</div></div>
+            <button className="btn-primary" onClick={setDisplay}>
+              Contact
+            </button>
+
+                <button className="seeElse" onFocus={showMoreInfo} onBlur={hideMoreInfo}>See More &nbsp; &rarr;</button>
 
           <ShowMore
                data={data}
                styles={styles}
                />
+            </div>
+        
+        </div>
+          
+         
 </>
         
   )
