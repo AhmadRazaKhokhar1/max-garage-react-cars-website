@@ -26,13 +26,13 @@ const LargeProduct = ({title, description,id, price, location, isFeatured, owner
   };
   passData()
 
-  const [styles, setStyles] = useState({display:'none'})
+  const [styles, setStyles] = useState({display:'block'})
 
     function showMoreInfo(){
-      setStyles({display:'block'})
+      setStyles({display:'block'});
     }
     function hideMoreInfo(){
-      setStyles({display:'none'})
+      setStyles({display:'none'});
     }
     return (
     <>

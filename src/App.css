@@ -482,12 +482,24 @@ hr{
 
 
 .moreInfo{
-  box-shadow: 5px 5px 25px black;
-  width: 80vw;
+  box-shadow: 585px 185px 585px rgb(0, 2, 37);
+  width: 70vw;
   position: fixed;
-  z-index: 5;
-  margin-top: -1155px;
-  background: white;
+  z-index: 2;
+  margin-top: -1205px;
+  background: white !important;
   display: flex;
-  
+  flex-direction: column;
+  height: 80vh;
+}
+.infoImageContainer{
+  width: 70vw;
+  height: 50vh;
+  overflow: hidden;
+}
+.infoImage{
+  width: 70vw;
+  height: 80vh;
+  position: inherit;
+  z-index: 1;
 }
