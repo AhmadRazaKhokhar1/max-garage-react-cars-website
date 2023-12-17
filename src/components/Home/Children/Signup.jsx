@@ -37,9 +37,9 @@ function rightForm(){
 
 // toggle the button 
   const handleClick = (e) => {
-    e.target.style.backgroundColor = 'rgb(65, 65, 241)';
+    e.target.style.backgroundColor = 'rgb(32, 0, 75, .85)';
     e.target.style.color = ' rgb(255, 255, 255)';
-    e.target.style.borderBottom = '3px solid navy'
+    e.target.style.borderBottom = '3px solid blue'
   }
   const handleBlur = (e) => {
     e.target.style.backgroundColor = 'rgba(199, 199, 199, 0.445)';
@@ -72,6 +72,7 @@ const logIn = async(e)=>{
   return (
     <div>
         <br />
+        <br />
       <div className="main-con">
         <div className="toggle-btn">
             <button className={`btn-main lf  ${active === 'login' ? 'active' : ''}` } onFocus={handleClick} onBlur={handleBlur} onClick={leftForm}>
@@ -87,30 +88,30 @@ const logIn = async(e)=>{
         <div className="left">
             <form method='POST' className="leftForm" onSubmit={signUp}>
               
-                <div class="mb-4">
-                  <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
-                  <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" />
+                <div className="mb-4">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-600">Name</label>
+                  <input required type="text" id="name" name="name" className="mt-1 p-2 w-full border rounded-md" autoComplete='on' autoCapitalize='on'/>
                 </div>
 
                 
-                <div class="mb-4">
-                  <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                  <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" />
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
+                  <input required type="email" id="email" name="email" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
                 </div>
 
               
-                <div class="mb-4">
-                  <label for="password" class="block text-sm font-medium text-gray-600">New Password</label>
-                  <input type="password" id="NewPassword" name="password" class="mt-1 p-2 w-full border rounded-md" />
+                <div className="mb-4">
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-600">New Password</label>
+                  <input required type="password" id="NewPassword" name="password" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
                 </div>
 
-                <div class="mb-4">
-                  <label for="password" class="block text-sm font-medium text-gray-600">Confirm Password</label>
-                  <input type="password" id="ConfirmPassword" name="password" class="mt-1 p-2 w-full border rounded-md" />
+                <div className="mb-4">
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-600">Confirm Password</label>
+                  <input required type="password" id="ConfirmPassword" name="password" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
                 </div>
 
               
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button type="submit" className="btn-primary">
                   Sign Up
                 </button>
 
@@ -121,19 +122,19 @@ const logIn = async(e)=>{
                   <form method='POST' className="leftForm" onSubmit={logIn}>
               
 
-              <div class="mb-4">
-                <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" />
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
+                <input required type="email" id="email" name="loginEmail" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
               </div>
 
           
-              <div class="mb-4">
-                <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                <input type="password" id="CheckPassword" name="password" class="mt-1 p-2 w-full border rounded-md" />
+              <div className="mb-4">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-600">Password</label>
+                <input required type="password" id="loginPassword" name="password" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
               </div>
 
             
-              <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              <button type="submit" className="btn-primary">
                 Continue
               </button>
 
@@ -152,14 +153,20 @@ const logIn = async(e)=>{
 
             <div className="main-content">
                 <h1 style={{fontSize:'24px', fontWeight:'900', wordSpacing:'5px', letterSpacing:'3px'}}>
-             MAX GARAGE
+                  MAX GARAGE
                 </h1>
-                <h4>
-                  A project by
-                </h4>
-                <h1>
+                <div className="flex">
+                <span>
+                  A Product by
+                </span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <h1 style={{fontWeight:'900', letterSpacing:'2px'}}>
                   Ahmad Raza Khokhar
                 </h1>
+                </div>
+                
             </div>
         </div>
 

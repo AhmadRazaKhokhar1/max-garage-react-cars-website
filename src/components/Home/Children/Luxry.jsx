@@ -1,7 +1,7 @@
 import React from 'react'
-import LargeProduct from '../../LargeProduct'
 import SmallProduct from '../../SmallProduct'
 import { Cars } from '../../../TestApi';
+import { NavLink } from 'react-router-dom';
 
 const Luxry = () => {
   const response = Cars.filter((e)=>(e.category === 'luxury')).splice(0, 3)
@@ -30,7 +30,7 @@ const Luxry = () => {
    </div>
    <div className="seeMore">
     <span className="seeElse">
-      See More &rarr;
+     <NavLink to='/luxury' style={{color:'navy'}}> See More &rarr;</NavLink>
     </span>
    </div>
     </div>

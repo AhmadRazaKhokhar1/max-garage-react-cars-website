@@ -12,7 +12,8 @@ export const Cars = [
         'likes':58000,
         'isFeatured':true,
         'category':'luxury',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Rolls Royce',
@@ -27,7 +28,8 @@ export const Cars = [
         'likes':105000,
         'isFeatured':true,
         'category':'luxury',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -42,7 +44,8 @@ export const Cars = [
         'likes':46000,
         'isFeatured':true,
         'category':'luxury',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Ferarri',
@@ -57,7 +60,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'sports',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Lamorgini',
@@ -72,7 +76,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'sports',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mustang',
@@ -87,7 +92,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'sports',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
 
     {
@@ -103,7 +109,8 @@ export const Cars = [
         'likes':58000,
         'isFeatured':true,
         'category':'sedan',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Toyota',
@@ -118,7 +125,8 @@ export const Cars = [
         'likes':105000,
         'isFeatured':true,
         'category':'sedan',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -133,7 +141,8 @@ export const Cars = [
         'likes':46000,
         'isFeatured':true,
         'category':'sedan',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -148,7 +157,8 @@ export const Cars = [
         'likes':46000,
         'isFeatured':true,
         'category':'sedan',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -163,7 +173,8 @@ export const Cars = [
         'likes':46000,
         'isFeatured':true,
         'category':'sedan',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'GMC',
@@ -178,7 +189,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Toyota',
@@ -193,7 +205,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'GMC',
@@ -208,7 +221,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -223,7 +237,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'suv',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Toyota',
@@ -238,7 +253,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'suv',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mercedes',
@@ -253,7 +269,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'suv',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Ferrari',
@@ -268,7 +285,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'sports',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Lamorgini',
@@ -283,7 +301,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'Mustang',
@@ -298,7 +317,8 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
     {
         'title':'GMC',
@@ -313,8 +333,105 @@ export const Cars = [
         'likes':50000,
         'isFeatured':false,
         'category':'trucks',
-        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus quaerat blanditiis eveniet provident odio fuga atque, animi porro molestiae ullam fugiat. Officiis est magnam nulla sit. Praesentium iure perspiciatis quis!Consequuntur eos ipsum blanditiis quasi, qui excepturi molestias iure ad quos cum facilis eveniet fugiat harum autem perspiciatis nam debitis necessitatibus exercitationem illo incidunt dicta sed ipsa? Quam, sed eveniet.Veniam aliquam ratione possimus ex voluptas officia reprehenderit dicta porro delectus, libero, ad aliquid deserunt amet inventore sint! Et, sapiente repudiandae. Illo sequi alias iure quaerat. Ad porro dolorum similique. Ad vitae corrupti id numquam, ea ipsum eaque sed! Sint enim, iure aperiam architecto, vel voluptatum dolorem inventore provident facilis ut doloribus quia nemo? Explicabo, consequatur itaque? Cumque, ad architecto'
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
     },
-
+    {
+        'title':'Mercedes',
+        'image':'/images/cars/gvegan2.jpeg',
+        'make':'2020',
+        'model':'G Vegan',
+        'mileage':'300 KM',
+        'price':'180K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    {
+        'title':'Toyota',
+        'image':'/images/cars/crown1.png',
+        'make':'2024',
+        'model':'Crown',
+        'mileage':'1500 KM',
+        'price':'120K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    {
+        'title':'Toyota',
+        'image':'/images/cars/crown2.png',
+        'make':'2014',
+        'model':'Crown',
+        'mileage':'100 KM',
+        'price':'50K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    {
+        'title':'Toyota',
+        'image':'/images/cars/crown3.png',
+        'make':'2019',
+        'model':'Crown',
+        'mileage':'1500 KM',
+        'price':'120K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    {
+        'title':'Toyota',
+        'image':'/images/cars/crv.jpeg',
+        'make':'2020',
+        'model':'CRV',
+        'mileage':'350 KM',
+        'price':'90K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    {
+        'title':'Honda',
+        'image':'/images/cars/crz.jpeg',
+        'make':'2024',
+        'model':'CRZ',
+        'mileage':'100 KM',
+        'price':'60K',
+        'currency':'$',
+        'owner':'Ahmad Raza Khokhar',
+        'location':'Arfa Tower, Lahore',
+        'likes':50000,
+        'isFeatured':false,
+        'category':'luxury',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga blanditiis fugit! Repellendus accusantium animi amet unde asperiores alias veniam ad harum modi non quam, dolorum voluptatum quasi earum eaAliquam, veniam deleniti tempora minus fugit ducimus vitae, necessitatibus.',
+        'phone':'03008039275'
+    },
+    
     
 ]

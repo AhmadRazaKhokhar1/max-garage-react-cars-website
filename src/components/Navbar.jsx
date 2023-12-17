@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { Link } from 'react-scroll';
-
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -15,80 +15,93 @@ const Navbar = () => {
     };
 
   window.addEventListener('scroll', handleScroll);
-
-  // Cleanup the event listener on component unmount
   return () => {
     window.removeEventListener('scroll', handleScroll);
   };
-}, []); // Empty dependency array to run the effect only once on mount
+}, []); 
 
 
   return (
 <header>
     <nav>
-      <a href="/">
+      <NavLink to="/" style={{textDecoration:'none', background:'transparent', border:'none'}}>
         <div className="brand">
             <h1 className="brandLogo f">M</h1><span>ax</span>&nbsp;
             <h1 className="brandLogo">G</h1><span>arage</span>&nbsp;
         </div> 
-        </a>
+        </NavLink>
         <div className="menu">
           <ul className='list'>
           
-        
-                  <li>
-                  <a href="#luxury">
+                    <Link to="luxury" smooth={true} duration={500}>
+                <NavLink to='/'>
+                      <li>
+                        Luxury CARS
+                      </li>
+                </NavLink>
+                  </Link>
 
-                  Luxury CARS
-                  </a>
-                  </li>
               <Link to="sports" smooth={true} duration={500}>
+                <NavLink to='/'>
                   <li>
                   Sports Cars
                   </li>
+                </NavLink>
               </Link>
         
             <Link to="sedan" smooth={true} duration={500}>
-                <li>
-                  Sedan Cars
-                </li>
-                </Link>
+              <NavLink to='/'>
+                  <li>
+                    Sedan Cars
+                  </li>
+              </NavLink>
+            </Link>
      
           
             <Link to="trucks" smooth={true} duration={500}>
-                <li>
-                  Trucks
-                </li>
-                </Link>
+              <NavLink to='/'>
+                  <li>
+                    Trucks
+                  </li>
+              </NavLink>
+            </Link>
      
  
             <Link to="suv" smooth={true} duration={500}>
-                <li>
-                  SUV
-                </li>
-                </Link>
+              <NavLink to='/'>
+                  <li>
+                    SUV
+                  </li>
+              </NavLink>
+            </Link>
 
             <Link to="contact" smooth={true} duration={500}>
-                <li>
-                  Contact Us
-                </li>
-                </Link>
+              <NavLink to='/'>
+                  <li>
+                    Contact Us
+                  </li>
+              </NavLink>
+            </Link>
 
           </ul>
         </div>
         <div>
            <ul className='lists'>
            <Link to="signUp" smooth={true} duration={500}>
+           <NavLink to='/'>
              <li>
               LogIn
              </li>
+           </NavLink>
           </Link>    
 
              /&nbsp;&nbsp;
            <Link to="signUp" smooth={true} duration={500}>
+           <NavLink to='/'>
              <li>
               SignUp
              </li>
+             </NavLink>
              </Link>
            </ul>
         </div>

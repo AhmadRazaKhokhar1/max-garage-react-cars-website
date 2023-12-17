@@ -37,8 +37,8 @@ const Home = () => {
         </div>
       <div className="cont">
         
-        <img src="../images/cars/ns1.jpg" alt="Cars cars supra mk4 mk-4 supra 1994" className="bg" />
-        <img src="../images/cars/ns3.jpg" alt="Cars cars supra mk4 mk-4 supra 1994" className="bg sc" />
+        <img src="../images/cars/ns1.jpg" alt="Cars cars supra mk4 mk-4 supra 1994" className="bg cc" />
+          <img src="../images/cars/ns3.jpg" alt="Cars cars supra mk4 mk-4 supra 1994" className="bg sc" />
         
       </div>
       </div>

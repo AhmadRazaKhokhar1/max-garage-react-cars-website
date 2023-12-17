@@ -5,6 +5,12 @@
 body{
   background: #F5F1EE;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: 2s ease-in-out;
+  overflow-y: auto;
+  user-select: none;
+  transition: .5s ease-in-out;
 }
 .brandLogo{
   font-weight: 900;
@@ -13,13 +19,13 @@ body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-shadow: 2px 2px 2px rgb(45, 0, 75);
   text-decoration: none;
-
 }
 
 a{
   text-decoration: none;
   color: white;
 }
+
 .f{
 margin-left: 5px;
 }
@@ -73,13 +79,7 @@ li:hover{
   border-bottom: 1px solid rgb(61, 61, 255);
   box-sizing: border-box;
 }
-body{
-  caret-color: transparent;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  transition: 2s ease-in-out;
-  overflow-y: auto;
-}
+
 .MAIN{
   width: 90vw;
   position: relative;
@@ -97,9 +97,14 @@ body{
   width: 50vw;
   height: 80vh;
 }
+.cc{
+  clip-path: polygon(0 0, 100% 0, 100% 94%, -50% 80%) 
+
+}
 .sc{
   border-left: 5px solid rgb(134, 134, 134);
   border-style:ridge;
+  clip-path: polygon(0 0, 1500% 0, 0% 94%, -50% 50%) 
 }
 .cont{
   display: flex;
@@ -124,6 +129,7 @@ body{
   font-style: oblique;
   color: rgb(21, 0, 48);
   text-shadow: 5px 5px 8px rgba(196, 99, 241, 0.445);
+  margin-top: 55px;
 }
 .rem{
   font-size: 54pt;
@@ -193,7 +199,7 @@ button{
 }
 hr{
   width: 400px;
-  margin:50px auto;
+  margin:20px auto;
   background:blue;
   height: 1px;
 }
@@ -208,7 +214,7 @@ hr{
   border-width: 5px;
   width: 200px;
   border-radius: 12px;
-  color: rgb(0, 61, 117);
+  color: rgb(32, 0, 75);
   text-shadow: 2px 2px rgb(150, 150, 253);
 }
 .box{
@@ -313,7 +319,7 @@ hr{
 
 .slider-main{
   position: absolute;
-  background: rgb(0, 0, 128);
+  background: rgb(32, 0, 75);
   height: 75%;
   width: 45vw;
   color: #F5F1EE;
@@ -334,7 +340,7 @@ hr{
   margin-top: 155px;
 }
 .active{
-  background: rgb(65, 65, 241);
+  background: rgba(32, 0, 75, 0.712);
   color:  rgb(255, 255, 255);
   border-bottom: 3px solid navy;
 }
@@ -384,9 +390,13 @@ hr{
 }
 .cardSmallTitleSmall{
   font-size: small;
+  color:rgb(32, 0, 75);
+
 }
 .cardSmallCarInfo{
   font-size: small;
+  color:rgb(32, 0, 75);
+
 }
 .cardSmallTitle{
   display: block;
@@ -395,13 +405,14 @@ hr{
   justify-content: center;
   align-items: center;
   font-weight: 900;
-  color: navy;
   font-size: large;
   text-shadow: 0px 0px 23px rgb(68, 68, 68);
-  -webkit-text-stroke: .5px  rgb(74, 24, 255);
+  -webkit-text-stroke: .5px rgb(32, 0, 75);
+  color:rgb(74, 24, 255);
+
 }
 .btn-primary{
-  background: navy;
+  background:rgb(32, 0, 75);
   padding: 10px;
   width: 110px;
   color: #F5F1EE;
@@ -410,6 +421,11 @@ hr{
   display: block;
   margin: auto;
   margin-bottom: 3px;
+  transition: .5s ease-in-out;
+}
+.btn-primary:hover{
+  background: rgba(0, 0, 128, 0.247);
+  color: rgb(32, 0, 75);
 }
 .flex-main{
   display: flex;
@@ -417,8 +433,61 @@ hr{
   justify-content: space-between;
 }
 .seeElse{
-  color: navy;
+  color: rgb(32, 0, 75);
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
+}
+.contactForm{
+  box-shadow: 5px 5px 25px black;
+  width: 50vw;
+  padding: 15px;
+  border-radius: 12px;
+  transform: translateY(35px);
+}
+
+/* Large Card CSS  */
+.largeCard{
+  width: 30vw;
+  height: auto;
+  padding-bottom: 12px;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 10px;
+  margin-top: 17px;
+}
+.largeCardImagContainer{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  height: 50vh;
+  width: 100%;
+}
+.largeCardImage{
+ width: auto;
+}
+.cardTitleLarge{
+  color: rgb(15, 0, 39);
+  font-weight: 900;
+  font-size: medium;
+  -webkit-text-stroke: 1px solid blue;
+}
+.infoContainer{
+  font-size: small;
+}
+.largeCardBody{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.moreInfo{
+  box-shadow: 5px 5px 25px black;
+  width: 80vw;
+  position: fixed;
+  z-index: 5;
+  margin-top: -1155px;
+  background: white;
+  display: flex;
+  
 }

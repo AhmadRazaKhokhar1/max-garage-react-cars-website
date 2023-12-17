@@ -1,25 +1,43 @@
-import { React, Routes, Route, BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import {Routes, Route } from 'react-router-dom';
 import './App.css'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import Error from './Error'
 import Navbar from './components/Navbar'
+import LuxuryMain from './components/LuxuryMain/LuxurysMain.jsx'
+import SedanMain from './components/sedanMain/SedansMain.jsx'
+import SportsMain from './components/sportsMain/SportMain.jsx'
+import SuvMain from './components/suvMain/SuvsMain.jsx'
+import TrucksMain from './components/trucksMain/TruckMain.jsx'
 
 function App() {
+
+ 
 
   return (
     <>
    
-     <BrowserRouter>
+   
 
     <Navbar />
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/*' element={<Error />} />
-        </Routes>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        
+        <Route path="/Luxury" element={<LuxuryMain/>} />
+        
+        <Route path="/Sedan" element={<SedanMain />} />
+        
+        <Route path="/Sports" element={<SportsMain />} />
+        
+        <Route path="/Suv" element={<SuvMain />} />
+        
+        <Route path="/Trucks" element={<TrucksMain />} />
+        
+        <Route path="*" element={<Error />} />
+      </Routes>
    <Footer />
 
-     </BrowserRouter>
 
 
    </>

@@ -7,7 +7,7 @@ const SmallProduct = (props) => {
 
        <div className="cardSmall">
         <div className="topImage">
-          <img src={props.image} alt="camary_toyota_car" className="imgCardSmall" />
+          <img src={props.image} alt={props.title} className="imgCardSmall" />
         </div>
      
 
@@ -18,7 +18,7 @@ const SmallProduct = (props) => {
           </div>
 
           <div className="flex inner-body">
-          <span className="cardSmallTitleSmall"><b>MODEL</b></span>
+          <span className="cardSmallTitleSmall"><b>Model</b></span>
             <span className="cardSmallCarInfo">{props.model}</span>
             
           </div>
@@ -29,7 +29,7 @@ const SmallProduct = (props) => {
           </div>
 
           <div className="flex inner-body">
-            <b>Price</b>
+            <b  className="cardSmallTitleSmall">Price</b>
           <span className="cardSmallCarInfo">{props.currency}&nbsp;{props.price}</span>
 
           </div>

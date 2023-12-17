@@ -1,6 +1,7 @@
 import React from 'react'
 import { Cars } from '../../../TestApi';
 import SmallProduct from '../../SmallProduct';
+import { NavLink } from 'react-router-dom';
 const SUV = () => {
   const response = Cars.filter((e)=>(e.category === 'suv')).splice(0, 3)
   response.length = 3;
@@ -28,7 +29,7 @@ const SUV = () => {
    </div>
    <div className="seeMore">
     <span className="seeElse">
-      See More &rarr;
+     <NavLink to='/Suv' style={{color:'navy'}}> See More &rarr;</NavLink>
     </span>
    </div>
     </div>

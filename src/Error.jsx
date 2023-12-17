@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Error = () => {
   return (
-    <div style={{display:'block', marginTop:' 80px', marginLeft:'350px', width:'40vw', position:'fixed'}}>
+    <div style={{paddingTop:'90px', top:'50px'}}>
       <main class="grid min-h-full place-items-center bg-transparent px-6 py-24 sm:py-32 lg:px-8">
   <div class="text-center">
     <p class="text-base font-semibold text-indigo-600">404</p>
