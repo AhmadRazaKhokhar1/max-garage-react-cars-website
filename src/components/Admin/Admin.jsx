@@ -44,7 +44,7 @@ const Admin = () => {
                 <input required type="file" id="carImage" name="carImage" className="mt-1 p-2 w-full border rounded-md" autoComplete='on' autoCapitalize='on'/>
               </div>
               <div className="mb-4">
-                <label htmlFor="Description" className="block text-sm font-medium text-gray-600">Car Image </label>
+                <label htmlFor="carDescription" className="block text-sm font-medium text-gray-600">Car Image </label>
                 <textarea required type="text" style={{resize:"none"}} rows={5} id="carDescription" name="carDescription" className="mt-1 p-2 w-full border rounded-md" autoComplete='on' autoCapitalize='on'/>
               </div>
 
