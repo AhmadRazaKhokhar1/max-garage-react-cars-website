@@ -251,6 +251,7 @@ hr{
   box-shadow: 0 0 20px grey;
   border-radius: 8px;
   width: 70vw;
+  height: auto;
   padding:35px 55px;
   display: flex;
   flex-direction: column;
@@ -320,7 +321,7 @@ hr{
 .slider-main{
   position: absolute;
   background: rgb(32, 0, 75);
-  height: 75%;
+  height: 72.13%;
   width: 45vw;
   color: #F5F1EE;
   border-bottom-right-radius: 155px;
