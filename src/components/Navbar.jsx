@@ -86,24 +86,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-           <ul className='lists'>
-           <Link to="signUp" smooth={true} duration={500}>
-           <NavLink to='/'>
-             <li>
-              LogIn
-             </li>
-           </NavLink>
-          </Link>    
-
-             /&nbsp;&nbsp;
-           <Link to="signUp" smooth={true} duration={500}>
-           <NavLink to='/'>
-             <li>
-              SignUp
-             </li>
-             </NavLink>
-             </Link>
-           </ul>
+           <div className="profileIconContainer">
+             <img src='/images/max-garage-profile-image.svg' alt="user-profile-image" className="profileIcon" />
+           </div>
         </div>
     </nav>
 </header>

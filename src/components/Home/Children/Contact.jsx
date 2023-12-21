@@ -21,11 +21,11 @@ const Contact = () => {
 
             
               <div className="mb-4">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-600">Your message</label>
+                <label htmlFor="userMessage" className="block text-sm font-medium text-gray-600">Your message</label>
                 <textarea 
-                type="password" 
-                id="NewPassword" 
-                name="password" 
+                type="text" 
+                id="userMessage" 
+                name="userMessafe" 
                 className="mt-1 p-2 w-full border rounded-md" 
                 rows={5} cols={20}
                 style={{resize:'none'}}
@@ -34,7 +34,7 @@ const Contact = () => {
 
             
               <button type="submit" className="btn-primary">
-                Sign Up
+                Send
               </button>
 
           </form>

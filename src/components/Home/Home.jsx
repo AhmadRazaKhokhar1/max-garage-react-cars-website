@@ -7,7 +7,6 @@ import SUV from './Children/SUV'
 import Contact from './Children/Contact'
 import Sponsor from './Children/Sponsor'
 import { Element } from 'react-scroll/modules/mixins/Helpers'
-import Signup from './Children/Signup'
 const Home = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -102,23 +101,14 @@ const Home = () => {
         <hr id="contact"/>
         
           <div  className='animated-div right-to-left'>
-          <h1 className="titleMain">
-            Contact US
+            <h1 className="titleMain">
+                Contact US
             </h1>
             <Contact /> 
           </div>
           <hr />
 
-          <Element name='signUp' className='element'></Element>
-        <hr id="signUp"/>
-        
-          <div  className='animated-div left-to-right'>
-          <h1 className="titleMain">
-            Join Us
-            </h1>
-            <Signup /> 
-          </div>
-          <hr />
+  <br /><br />
     </div>
 
     </>

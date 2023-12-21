@@ -95,7 +95,7 @@ li:hover{
   z-index: -1;
   width:fit-content;
   width: 50vw;
-  height: 80vh;
+  height: 90vh;
 }
 .cc{
   clip-path: polygon(0 0, 100% 0, 100% 94%, -50% 80%) 
@@ -230,7 +230,7 @@ hr{
 
 .animated-div {
   opacity: 0;
-  transition: opacity 0.5s, transform 1s;
+  transition: opacity 0.3s, transform 1s;
 }
 
 .animated-div.left-to-right {
@@ -532,4 +532,18 @@ hr{
   justify-content:space-between ;
   align-items: center;
   margin: auto;
+}
+.profileIconContainer{
+  border-radius: 37px;
+  background: white;
+  padding: 5px;
+}
+.profileIcon{
+  width: 25px;
+  height: 25px;
+}
+.registrationContainer{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
 }

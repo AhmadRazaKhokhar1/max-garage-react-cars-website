@@ -11,6 +11,7 @@ import SportsMain from './components/sportsMain/SportMain.jsx'
 import SuvMain from './components/suvMain/SuvsMain.jsx'
 import TrucksMain from './components/trucksMain/TruckMain.jsx'
 import Admin from './components/Admin/Admin.jsx';
+import Registration from './components/Registration/Registration.jsx';
 
 function App() {
 
@@ -34,6 +35,9 @@ function App() {
         <Route path="/Suv" element={<SuvMain />} />
         
         <Route path="/Trucks" element={<TrucksMain />} />
+
+        <Route path="/Register" element={<Registration/>}/>
+
         <Route path="/Admin" element={<Admin />} />
         
         <Route path="*" element={<Error />} />
