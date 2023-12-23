@@ -26,6 +26,7 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []); 
+  
   return (
     <>
   
