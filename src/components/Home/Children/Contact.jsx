@@ -7,21 +7,24 @@ const Contact = () => {
   return (
     <div>
      <form method='POST' className="contactForm" onSubmit={contact}>
-              
+              <p className="text-gray-400 fs-sm">
+                (Fields with* are required)
+              </p>
+              <br />
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-600">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-600">Name*</label>
                 <input required type="text" id="name" name="ContactName" className="mt-1 p-2 w-full border rounded-md" autoComplete='on' autoCapitalize='on'/>
               </div>
 
               
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email*</label>
                 <input required type="email" id="contactEmail" name="email" className="mt-1 p-2 w-full border rounded-md" autoComplete='on'/>
               </div>
 
             
               <div className="mb-4">
-                <label htmlFor="userMessage" className="block text-sm font-medium text-gray-600">Your message</label>
+                <label htmlFor="userMessage" className="block text-sm font-medium text-gray-600">Your message*</label>
                 <textarea 
                 type="text" 
                 id="userMessage" 

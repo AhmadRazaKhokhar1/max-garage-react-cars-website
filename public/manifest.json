@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "maxLogo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "C:/Users/USER/Desktop/Max Garage/max-garage/public/maxLogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
               <NavLink to="/" className="flex items-center" style={{textDecoration:'none', border:'none'}}>
-                  <img src="/images/maxLogo.png" className="h-8 me-3" alt="FlowBite Logo" />
+                  <img src="/maxLogo512.png" className="h-8 me-3" alt="Max Garage Logo" />
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Max Garage</span>
               </NavLink>
           </div>

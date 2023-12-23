@@ -230,20 +230,20 @@ hr{
 
 .animated-div {
   opacity: 0;
-  transition: opacity 0.3s, transform 1s;
+  transition: opacity 1.3s, transform 1s;
 }
 
-.animated-div.left-to-right {
-  transform: translateX(-60px); /* Starting position from left */
+.animated-div.top-to-bottom {
+  transform: translateY(-80px); /* Starting position from left */
 }
 
-.animated-div.right-to-left {
-  transform: translateX(60px); /* Starting position from right */
+.animated-div.bottom-to-top {
+  transform: translateY(80px); /* Starting position from right */
 }
 
 .animated-div.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* signup and login page css  */
@@ -546,4 +546,18 @@ hr{
   display: flex; 
   flex-direction: column;
   align-items: center;
+}
+
+.profileImagePreview{
+  border-radius: 100%;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.profileImageRegister{
+  min-width: auto;
+  max-width: 200px;
+  min-height: auto;
+  max-height: 180px;
+  background-size: contain;
 }
