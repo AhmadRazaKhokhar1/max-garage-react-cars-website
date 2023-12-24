@@ -12,7 +12,7 @@ const Signup = () => {
   const [active, setActive] = useState("login");
 
   function leftForm() {
-    setSliderMain("-70px");
+    setSliderMain("-14px");
     setBBL("0px");
     setBBR("155px");
     setBTL("0px");
@@ -21,7 +21,7 @@ const Signup = () => {
     setActive("login");
   }
   function rightForm() {
-    setSliderMain("478px");
+    setSliderMain("450px");
     setBBL("155px");
     setBBR("0px");
     setBTL("155px");

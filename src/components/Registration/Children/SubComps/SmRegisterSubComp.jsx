@@ -1,13 +1,15 @@
-import React, {useState} from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import defaultProfile from "../../../../Assets/defaultImage.png";
+
+import axios, { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 function FormRegisterSubComp() {
   const baseUrl = "http://localhost:2013/max-garage/api/user/registration";
   //Register
   const [fullName, setFullName] = useState("");
-  const [profileImage, setProfileImage] = useState([
-    "images/max-garage-profile-image.svg",
-  ]);
+  const [profileImage, setProfileImage] = useState(null);
+  const [showImage, setShowImage] = useState(defaultProfile);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
@@ -17,149 +19,173 @@ function FormRegisterSubComp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const registerNewUser = async () => {
+  const registerNewUser = async (e) => {
+    e.preventDefault();
+
     try {
-      const response = await axios.post(`${baseUrl}/register`, {
-        fullName: fullName,
-        profileImage: profileImage,
-        email: email,
-        phone: phone,
-        age: age,
-        gender: gender,
-        industry: industry,
-        qualification: qualification,
-        password: password,
+      if (password !== confirmPassword) {
+        return toast.warning("Passwords Must Match");
+      } else if (password.length < 12) {
+        return toast.warn("Password Must Be Of Atleast 12 Characters");
+      } else if (age > 120) {
+        return toast.warn("Please Enter A Valid Age");
+      } else if (phone.length > 11 || phone.length < 11) {
+        return toast.warn("Please Enter A Valid Phone");
+      }
+
+      const formData = new FormData();
+      formData.append("fullName", fullName);
+      formData.append("profileImage", profileImage);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("age", age);
+      formData.append("gender", gender);
+      formData.append("industry", industry);
+      formData.append("qualification", qualification);
+      formData.append("password", password);
+
+      const response = await axios.post(`${baseUrl}/register`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
-      console.log(response.data);
+      const data = response.data;
+      if (data.success === true) {
+        toast.success(data.message);
+        console.log(data.message);
+      }
     } catch (error) {
       console.log(`Error in Register: ${error}`);
+      toast.error(error.response.data.message);
+
     }
   };
+
   const handleFileChange = (event) => {
     const file = event.target.files[0];
 
-    if (file) {
+    if (file && file.type.startsWith("image/")) {
+      setProfileImage(file);
       const reader = new FileReader();
 
       reader.onloadend = () => {
-        // Check if the result is a data URL before setting the image source
-        // if (typeof reader.result === 'string') {
-        setProfileImage(reader.result);
-        // }
+        if (typeof reader.result === "string") {
+          setShowImage(reader.result); // Update with the data URL
+        }
       };
 
-      // Read the selected file as a data URL
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file); // Read the selected file as a data URL
+    } else {
+      toast.warning("Please select a valid image");
     }
   };
+
   return (
     <div>
       <form method="POST" className="leftForm" onSubmit={registerNewUser}>
-        <div className="mb-4 profileImagePreview">
+        <div className="mb-1 profileImagePreview absolute mb-96 mr-28 ">
           <img
-            src={
-              profileImage
-                ? profileImage
-                : "/images/max-garage-profile-image.svg"
-            }
+            src={showImage ? showImage : defaultProfile}
             alt={fullName}
             className="profileImageRegister"
           />
         </div>
-        <div className="mb-4">
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Full Name
-          </label>
-          <input
-            required
-            type="text"
-            id="name"
-            name="name"
-            className="mt-1 p-2 w-64 border rounded-md"
-            autoComplete="on"
-            autoCapitalize="on"
-            placeholder="Enter your full name"
-            value={fullName}
-            onChange={(e) => {
-              setFullName(e.target.value);
-            }}
-          />
-        </div>
+        <div className="flex items-center justify-between ddd my-1">
+          <div className="mb-1">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Full Name
+            </label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              className="mt-1 p-2 w-48 mr-2 border rounded-md"
+              autoComplete="on"
+              autoCapitalize="on"
+              placeholder="Enter your full name"
+              value={fullName}
+              onChange={(e) => {
+                setFullName(e.target.value);
+              }}
+            />
+          </div>
 
-        <div className="mb-4">
-          <label
-            htmlFor="profileImage"
-            className="block text-sm font-medium text-gray-600  w-64"
-          >
-            profileImage
-          </label>
-          <input
-            required
-            type="file"
-            id="profileImage"
-            name="profileImage"
-            className="mt-1 p-2 w-full border rounded-md"
-            autoComplete="on"
-            accept="image/*"
-            onChange={handleFileChange}
-          />
+          <div className="mb-1">
+            <label
+              htmlFor="profileImage"
+              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+            >
+              profileImage
+            </label>
+            <input
+              required
+              type="file"
+              id="profileImage"
+              name="profileImage"
+              className="mt-1 p-2 w-48 mr-2 border rounded-md"
+              autoComplete="on"
+              accept="image/*"
+              onChange={handleFileChange}
+            />
+          </div>
         </div>
+        <div className="flex items-center justify-between ddd my-1">
+          <div className="mb-1">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+            >
+              Email
+            </label>
+            <input
+              required
+              type="email"
+              id="emailReg"
+              name="email"
+              className="mt-1 p-2 w-48 mr-2 border rounded-md"
+              placeholder="Enter your email"
+              autoComplete="on"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
 
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-600  w-64"
-          >
-            Email
-          </label>
-          <input
-            required
-            type="email"
-            id="email"
-            name="email"
-            className="mt-1 p-2 w-full border rounded-md"
-            placeholder="Enter your email"
-            autoComplete="on"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
+          <div className="mb-1">
+            <label
+              htmlFor="Phone"
+              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+            >
+              Phone
+            </label>
+            <input
+              required
+              type="tel"
+              id="phone"
+              name="phone"
+              className="mt-1 p-2 w-48 mr-2 border rounded-md"
+              autoComplete="on"
+              placeholder="Enter phone number"
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+            />
+          </div>
         </div>
-
-        <div className="mb-4">
-          <label
-            htmlFor="Phone"
-            className="block text-sm font-medium text-gray-600  w-64"
-          >
-            Phone
-          </label>
-          <input
-            required
-            type="tel"
-            id="phone"
-            name="phone"
-            className="mt-1 p-2 w-full border rounded-md"
-            autoComplete="on"
-            placeholder="Enter phone number"
-            value={phone}
-            onChange={(e) => {
-              setPhone(e.target.value);
-            }}
-          />
-        </div>
-
-        <div className="mb-4 ">
+        <div className="mb-1 ">
           <label
             htmlFor="gender"
-            className="flex text-sm font-medium text-gray-600 w-64"
+            className="flex text-sm font-medium text-gray-600 w-72 mr-32"
           >
             <div className="flex w-40 justify-center items-center flex flex-row ">
               <label
-                className="flex justify-center items-center w-32 my-2"
+                className="flex justify-center items-center w-32 my-1"
                 htmlFor="Male"
               >
                 Male
@@ -193,7 +219,7 @@ function FormRegisterSubComp() {
                 />
               </label>
               <label
-                className="flex justify-center items-center w-32 my-2"
+                className="flex justify-center items-center w-32 my-1"
                 htmlFor="Transgender"
               >
                 Other
@@ -214,55 +240,56 @@ function FormRegisterSubComp() {
             </div>
           </label>
         </div>
+        <div className="flex items-center justify-between ddd my-1">
+          <div className="mb-1">
+            <label
+              htmlFor="age"
+              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+            >
+              Age
+            </label>
+            <input
+              required
+              type="number"
+              id="age"
+              name="age"
+              className="mt-1 p-2 w-48 mr-2 border rounded-md"
+              autoComplete="on"
+              placeholder="Enter your age"
+              min={12}
+              value={age}
+              onChange={(e) => {
+                setAge(e.target.value);
+              }}
+            />
+          </div>
 
-        <div className="mb-4">
-          <label
-            htmlFor="age"
-            className="block text-sm font-medium text-gray-600  w-64"
-          >
-            Age
-          </label>
-          <input
-            required
-            type="number"
-            id="age"
-            name="age"
-            className="mt-1 p-2 w-full border rounded-md"
-            autoComplete="on"
-            placeholder="Enter your age"
-            value={age}
-            onChange={(e) => {
-              setAge(e.target.value);
-            }}
-          />
+          <div className="mb-1">
+            <label
+              htmlFor="qualification"
+              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+            >
+              Qualification
+            </label>
+            <input
+              required
+              type="text"
+              id="qualification"
+              name="qualification"
+              className="mt-1 p-2 w-full border rounded-md"
+              autoComplete="on"
+              placeholder="Qualification"
+              value={qualification}
+              onChange={(e) => {
+                setQualification(e.target.value);
+              }}
+            />
+          </div>
         </div>
-
-        <div className="mb-4">
+        <div className="mb-1">
           <label
             htmlFor="qualification"
-            className="block text-sm font-medium text-gray-600  w-64"
-          >
-            Qualification
-          </label>
-          <input
-            required
-            type="text"
-            id="qualification"
-            name="qualification"
-            className="mt-1 p-2 w-full border rounded-md"
-            autoComplete="on"
-            placeholder="Qualification"
-            value={qualification}
-            onChange={(e) => {
-              setQualification(e.target.value);
-            }}
-          />
-        </div>
-
-        <div className="mb-4">
-          <label
-            htmlFor="qualification"
-            className="block text-sm font-medium text-gray-600  w-64"
+            className="block text-sm font-medium text-gray-600  w-48 mr-2"
           >
             Field
           </label>
@@ -271,9 +298,9 @@ function FormRegisterSubComp() {
             type="text"
             id="industry"
             name="industry"
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 p-2 w-96 border rounded-md"
             autoComplete="on"
-            placeholder="Your profession"
+            placeholder="Software Engineer, etc.,"
             value={industry}
             onChange={(e) => {
               setIndustry(e.target.value);
@@ -281,50 +308,51 @@ function FormRegisterSubComp() {
           />
         </div>
 
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-600 "
-          >
-            New Password
-          </label>
-          <input
-            required
-            type="password"
-            id="NewPassword"
-            name="password"
-            className="mt-1 p-2 border rounded-md  w-64"
-            autoComplete="on"
-            value={password}
-            placeholder="Confirm password"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-        </div>
+        <div className="flex items-center justify-between ddd my-1">
+          <div className="mb-1">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-600 "
+            >
+              New Password
+            </label>
+            <input
+              required
+              type="password"
+              id="NewPassword"
+              name="password"
+              className="mt-1 p-2 border rounded-md  w-48 mr-2"
+              autoComplete="on"
+              value={password}
+              placeholder="Confirm password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
 
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Confirm Password
-          </label>
-          <input
-            required
-            type="password"
-            id="ConfirmPassword"
-            name="password"
-            className="mt-1 p-2 border rounded-md  w-64"
-            autoComplete="on"
-            placeholder="Confirm password"
-            value={confirmPassword}
-            onChange={(e) => {
-              setConfirmPassword(e.target.value);
-            }}
-          />
+          <div className="mb-1">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Confirm Password
+            </label>
+            <input
+              required
+              type="password"
+              id="ConfirmPassword"
+              name="password"
+              className="mt-1 p-2 border rounded-md  w-48 mr-2"
+              autoComplete="on"
+              placeholder="Confirm password"
+              value={confirmPassword}
+              onChange={(e) => {
+                setConfirmPassword(e.target.value);
+              }}
+            />
+          </div>
         </div>
-
         <button type="submit" className="btn-primary">
           Sign Up
         </button>

@@ -250,8 +250,8 @@ hr{
 .main-con{
   box-shadow: 0 0 20px grey;
   border-radius: 8px;
-  width: 90vw;
-  height: auto;
+  width: 72vw;
+  height: 100vh;
   padding:5px 5px;
   display: flex;
   flex-direction: column;
@@ -262,7 +262,7 @@ hr{
   border: none;
   height: auto;
   display: flex;
-  width: 80vw;
+  width: 70vw;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -275,7 +275,7 @@ hr{
   background: rgba(199, 199, 199, 0.445);
   border-radius: 8px;
   position: absolute;
-  margin-top: -850px;
+  margin-top: -550px;
   padding: 0;
 }
 
@@ -322,22 +322,22 @@ hr{
   position: absolute;
   background: rgb(32, 0, 75);
   margin-top: 45px;
-  height: 872px;
-  width: 50.1vw;
+  height: 567px;
+  width: 38.1vw;
   color: #F5F1EE;
   border-bottom-right-radius: 155px;
   border-top-right-radius: 155px;
   transition: 1s ease-in-out;
   padding: 12px;
-  translate: -70px;
-  transform: translateY(-42px);
+  translate: -14px;
+  transform: translateY(-112px);
   box-shadow: 5px 5px 15px black;
 }
 .main-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80vh;
+  height: 40vh;
   align-items: center;
   margin-top: 155px;
 }
@@ -554,12 +554,12 @@ hr{
   overflow: hidden;
   width: auto;
   height: auto;
+  margin-top: -135px;
 }
 .profileImageRegister{
   min-width: auto;
-  max-width: 200px;
+  max-width: 80px;
   min-height: auto;
-  max-height: 180px;
+  max-height: 80px;
   background-size: contain;
 }
-

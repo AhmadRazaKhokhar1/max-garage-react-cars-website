@@ -11,12 +11,14 @@ import SuvMain from "./components/suvMain/SuvsMain.jsx";
 import TrucksMain from "./components/trucksMain/TruckMain.jsx";
 import Admin from "./components/Admin/Admin.jsx";
 import Registration from "./components/Registration/Registration.jsx";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
       <Navbar />
-
+<ToastContainer/>
       <Routes>
         <Route path="/" element={<Home />} />
 
