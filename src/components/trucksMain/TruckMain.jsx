@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import LargeProduct from '../LargeProduct';
+import Loader from '../Loader/Loader';
 import { Cars } from '../../TestApi';
 import { useNavigate } from 'react-router-dom';
 
 const Truck = () => {
+  const [loader, setLoader] = useState(true);
    //Token verification
    const navigate = useNavigate();
    useEffect(()=>{
@@ -11,7 +13,7 @@ const Truck = () => {
       if(!token){
         navigate('/Register')
       }
- 
+ setLoader(false)
    },[navigate])
 // just in case if the page is scrolled down by default
   useEffect(() => {
@@ -24,6 +26,9 @@ const response = Cars.filter((e)=>e.category === 'trucks')
 const id = Math.floor(Math.random()*55213567)
 
   return (
+    <>
+   {
+      loader?<Loader/>:(
     <div style={{paddingTop:'90px', top:'50px'}}>
        <h1 className="titleMain">
               Trucks
@@ -65,6 +70,8 @@ const id = Math.floor(Math.random()*55213567)
         </div>
         <br />
     </div>
+      )}
+    </>
   )
 }
 

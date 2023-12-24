@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Luxry from "./Children/Luxry";
-import Sports from "./Children/Sports";
-import Sedan from "./Children/Sedan";
-import Trucks from "./Children/Trucks";
-import SUV from "./Children/SUV";
-import Contact from "./Children/Contact";
-import Sponsor from "./Children/Sponsor";
-import { Element } from "react-scroll/modules/mixins/Helpers";
+
 import car1 from "../../../src/Assets/ns1.jpg";
 import car2 from "../../../src/Assets/ns3.jpg";
 import car3 from "../../../src/Assets/sp1.jpg";
 import car4 from "../../../src/Assets/sp2.jpg";
 import car5 from "../../../src/Assets/amg.jpeg";
 import car6 from "../../../src/Assets/amg2.jpeg";
-
+import Main from "./Children/Main";
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
+
 
 
 const Home = () => {
+  const [loaded, setLoaded] = useState(true);
+
   //Token verification
   const navigate = useNavigate();
+  
   useEffect(()=>{
     const token = localStorage.getItem('authTokenJWT');
      if(!token){
@@ -50,7 +48,7 @@ const Home = () => {
   const [leftImage, setLeftImage] = useState(car1);
   const [rightImage, setRightImage] = useState(car2);
 
-const changeImages =()=>{ setInterval(()=>{
+function changeImages(){ setInterval(()=>{
 
     const p1 = new Promise((res, rej) => {
       setInterval(function () {
@@ -60,44 +58,46 @@ const changeImages =()=>{ setInterval(()=>{
           res(a, b);
         }
       }, 8000);
-    });
-    const p2 = new Promise((res, rej) => {
-      setInterval(function () {
-        if (leftImage === car3 && rightImage === car4) {
-          const a = setLeftImage(car5);
-          const b = setRightImage(car6);
-          res(a, b);
-        }
-      }, 8000);
-    });
-    const p3 = new Promise((res, rej) => {
-      // setInterval(function () {
-        if (leftImage === car5 && rightImage === car6) {
-          const a = setLeftImage(car1);
-          const b = setRightImage(car2);
-          res(a, b);
-        }
-      // }, 8000);
-    });
-    p1.then((resolve) => {
-      resolve(p2);
-    })
-      .then((resolve) => {
-        resolve(p3);
+    }).then(
+      function(resolve){
+        setInterval(function () {
+          if (leftImage === car3 && rightImage === car4) {
+            const a = setLeftImage(car5);
+            const b = setRightImage(car6);
+            resolve(a, b);
+          }
+        }, 8000);
+      }).then((res) => {
+        setInterval(function () {
+          if (leftImage === car5 && rightImage === car6) {
+            const a = setLeftImage(car1);
+            const b = setRightImage(car2);
+            res(a, b);
+          }
+        }, 8000);
+      }).catch((error)=>{
+        console.log(error)
       })
-      .catch((err) => {
-        console.log(err);
-      });
-
-}, 8000)
+      }
+    )
 }
 
-useEffect(()=>{changeImages();}, [])
+useEffect(()=>{const main = setInterval(()=>{changeImages(); return ()=>{clearInterval(main)} }, 2000); setLoaded(false);}, [])
+
 
 
   return (
     <>
+  {loaded?(
+  <Loader/>
+   ):
+    <div>
+
+    
+    <div>
+    </div>
       <div>
+        
         <div className="title">
           <h1
             className="BrandTitle"
@@ -124,66 +124,12 @@ useEffect(()=>{changeImages();}, [])
           />
         </div>
       </div>
-      <div className="MAIN">
-        <br />
-
-        <div className="sponsors">
-          <Sponsor />
-        </div>
-
-        <hr id="luxury" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">Luxry Cars</h1>
-          <Luxry />
-        </div>
-
-        <Element name="sports" className="element"></Element>
-        <hr id="sports" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">Sports Cars</h1>
-          <Sports />
-        </div>
-
-        <Element name="sedan" className="element"></Element>
-        <hr id="sedan" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">Sedan Cars</h1>
-          <Sedan />
-        </div>
-
-        <Element name="trucks" className="element"></Element>
-        <hr id="trucks" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">Trucks</h1>
-          <Trucks />
-        </div>
-
-        <Element name="suv" className="element"></Element>
-        <hr id="suv" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">SUV Cars</h1>
-          <SUV />
-        </div>
-
-        <Element name="contact" className="element"></Element>
-        <hr id="contact" />
-
-        <div className="animated-div bottom-to-top">
-          <h1 className="titleMain">Contact US</h1>
-          <Contact />
-        </div>
-        <hr />
-
-        <br />
-        <br />
+     
+      <Main/>
       </div>
+      }
+      
     </>
-  );
-};
+)}
 
 export default Home;

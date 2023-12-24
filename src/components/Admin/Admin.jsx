@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 const Admin = () => {
+  const [loaded, setLoaded] = useState(true);
     //Token verification
     const navigate = useNavigate();
     useEffect(()=>{
       const token = localStorage.getItem('authTokenJWT');
+      if(!token){
+       return navigate('/Register')
+      }
       // Admin verification
       const [header, payload, signature] = token.split('.');
       const decodedPayload = JSON.parse(atob(payload));
 
-       if(!token){
-         navigate('/Register')
+       if(decodedPayload.isAdmin !== true){
+       return  navigate('/');
+
        }
-       else if(decodedPayload.isAdmin !== true){
-        navigate('/');
-       }
-  
+     setLoaded(false)
     },[navigate])
 
   const [carBrand, setCarBrand] = useState('');
@@ -76,6 +79,8 @@ const Admin = () => {
     console.log(response);
   }
   return (
+    <>
+    {loaded?<Loader/>:(
     <div style={{paddingTop:'90px', top:'50px'}}>
               <h1 className="titleMain justify-content-center">
                 Admin
@@ -155,6 +160,8 @@ const Admin = () => {
           </form>
           <br /><br />
     </div>
+    )}
+    </>
   )
 }
 
