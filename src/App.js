@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import Footer from "./components/Footer/Footer";
 import Error from "./Error";
-import Navbar from "./components/Navbar";
+import Navbar from '../src/components/NavBar/Navbar.jsx'
 import LuxuryMain from "./components/LuxuryMain/LuxurysMain.jsx";
 import SedanMain from "./components/sedanMain/SedansMain.jsx";
 import SportsMain from "./components/sportsMain/SportMain.jsx";

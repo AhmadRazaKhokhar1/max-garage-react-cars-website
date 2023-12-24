@@ -7,8 +7,15 @@ const Admin = () => {
     const navigate = useNavigate();
     useEffect(()=>{
       const token = localStorage.getItem('authTokenJWT');
+      // Admin verification
+      const [header, payload, signature] = token.split('.');
+      const decodedPayload = JSON.parse(atob(payload));
+
        if(!token){
          navigate('/Register')
+       }
+       else if(decodedPayload.isAdmin !== true){
+        navigate('/');
        }
   
     },[navigate])

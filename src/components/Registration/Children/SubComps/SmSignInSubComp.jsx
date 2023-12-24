@@ -2,14 +2,31 @@ import React, {useState} from 'react'
 import axios from 'axios';
 
 function SmSignInSubComp() {
-    const [logInEmail, setLogInEmail] = useState("");
-    const [logInPassword, setLogInPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
   
     //logIn
     const logIn = async (e) => {
       e.preventDefault();
+      const baseUrl = 'http://localhost:2013/max-garage/api';
+
       try {
-        const response = await axios.post('http://localhost:')
+        const response = await axios.post(`${baseUrl}/user/registration/login`, {
+          email:email, password:password
+        });
+        const data = response.data;
+        console.log(data)
+        if(data.success===true){
+          alert(data.message)
+        }
+         localStorage.setItem('authTokenJWT', data.token);
+         const token = data.token;
+         
+        const isAdmin = data.userDetails.isAdmin;
+       const [header, payload, signature] = token.split('.');
+       const decodedPayload = JSON.parse(atob(payload));
+        console.log(decodedPayload)
+
       } catch (error) {
         console.log(
           `There was an Error submitting the SignUp Form! ERROR 404: ${error}`
@@ -32,11 +49,11 @@ function SmSignInSubComp() {
                   required
                   type="email"
                   id="email"
-                  name="loginEmail"
+                  name="email"
                   className="mt-1 p-2 w-64 border rounded-md"
                   autoComplete="on"
-                  value={logInEmail}
-                  onChange={(e) => setLogInEmail(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -50,12 +67,12 @@ function SmSignInSubComp() {
                 <input
                   required
                   type="password"
-                  id="loginPassword"
+                  id="password"
                   name="password"
                   className="mt-1 p-2 w-64 border rounded-md"
                   autoComplete="on"
-                  value={logInPassword}
-                  onChange={(e) => setLogInPassword(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="flex items-center justify-between w-64 text-gray-700">
