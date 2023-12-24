@@ -1,8 +1,18 @@
 import React, {useEffect} from 'react'
 import LargeProduct from '../LargeProduct';
 import { Cars } from '../../TestApi';
+import { useNavigate } from 'react-router-dom';
 
 const Suv = () => {
+   //Token verification
+   const navigate = useNavigate();
+   useEffect(()=>{
+     const token = localStorage.getItem('authTokenJWT');
+      if(!token){
+        navigate('/Register')
+      }
+ 
+   },[navigate])
 // just in case if the page is scrolled down by default
   useEffect(() => {
     window.scrollTo(0, 0);

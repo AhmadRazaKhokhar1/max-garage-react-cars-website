@@ -250,19 +250,19 @@ hr{
 .main-con{
   box-shadow: 0 0 20px grey;
   border-radius: 8px;
-  width: 70vw;
+  width: 90vw;
   height: auto;
-  padding:35px 55px;
+  padding:5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .container-main{
   border: none;
   height: auto;
   display: flex;
-  width: 60vw;
+  width: 80vw;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -275,7 +275,7 @@ hr{
   background: rgba(199, 199, 199, 0.445);
   border-radius: 8px;
   position: absolute;
-  margin-top: -450px;
+  margin-top: -850px;
   padding: 0;
 }
 
@@ -301,10 +301,9 @@ hr{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 2;
   align-items: center;
   justify-content: center;
-  position: static;
+  position: relative;
 }
 .rightForm{
   display: flex;
@@ -314,6 +313,7 @@ hr{
   align-items: flex-end;
   justify-content: center;
   position: static;
+  transform: translateY(155px);
   height: 50vh;
   background: red;
 }
@@ -321,14 +321,15 @@ hr{
 .slider-main{
   position: absolute;
   background: rgb(32, 0, 75);
-  height: 72.13%;
-  width: 45vw;
+  margin-top: 45px;
+  height: 872px;
+  width: 50.1vw;
   color: #F5F1EE;
   border-bottom-right-radius: 155px;
   border-top-right-radius: 155px;
   transition: 1s ease-in-out;
   padding: 12px;
-  translate: -68px;
+  translate: -70px;
   transform: translateY(-42px);
   box-shadow: 5px 5px 15px black;
 }
@@ -336,7 +337,7 @@ hr{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 10vh;
+  height: 80vh;
   align-items: center;
   margin-top: 155px;
 }

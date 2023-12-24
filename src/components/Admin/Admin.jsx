@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
+    //Token verification
+    const navigate = useNavigate();
+    useEffect(()=>{
+      const token = localStorage.getItem('authTokenJWT');
+       if(!token){
+         navigate('/Register')
+       }
+  
+    },[navigate])
+
   const [carBrand, setCarBrand] = useState('');
   const [carMileage, setCarMileage] = useState('');
   const [carOwner, setCarOwner] = useState('');

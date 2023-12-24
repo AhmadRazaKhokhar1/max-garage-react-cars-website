@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Luxry from "./Children/Luxry";
 import Sports from "./Children/Sports";
 import Sedan from "./Children/Sedan";
@@ -7,20 +7,27 @@ import SUV from "./Children/SUV";
 import Contact from "./Children/Contact";
 import Sponsor from "./Children/Sponsor";
 import { Element } from "react-scroll/modules/mixins/Helpers";
-import car1 from "../../../src/ns1.jpg";
-import car2 from "../../../src/ns3.jpg";
-import car3 from "../../../src/sp1.jpg";
-import car4 from "../../../src/sp2.jpg";
-import car5 from "../../../src/amg.jpeg";
-import car6 from "../../../src/amg2.jpeg";
-import { useHistory } from "react-router-dom";
+import car1 from "../../../src/Assets/ns1.jpg";
+import car2 from "../../../src/Assets/ns3.jpg";
+import car3 from "../../../src/Assets/sp1.jpg";
+import car4 from "../../../src/Assets/sp2.jpg";
+import car5 from "../../../src/Assets/amg.jpeg";
+import car6 from "../../../src/Assets/amg2.jpeg";
+
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
-  const token = localStorage.getItem('authTokenJWT');
- const history = useHistory()
-  if(!token){
-    history.push('/Register')
-  }
+  //Token verification
+  const navigate = useNavigate();
+  useEffect(()=>{
+    const token = localStorage.getItem('authTokenJWT');
+     if(!token){
+       navigate('/Register')
+     }
+
+  },[])
+
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll(".animated-div");
