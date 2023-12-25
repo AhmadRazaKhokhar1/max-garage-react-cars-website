@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-// import { Link } from 'react-scroll';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
