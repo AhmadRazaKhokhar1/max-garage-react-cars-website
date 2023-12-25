@@ -4,8 +4,9 @@ import { JobOptions, FamousDegreesInPakistan } from "./options";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-function FormRegisterSubComp() {
+function FormRegisterSubComp({passBool}) {
   const baseUrl = "http://localhost:2013/max-garage/api/user/registration";
+
   //Register
   const [fullName, setFullName] = useState("");
   const [profileImage, setProfileImage] = useState(null);
@@ -22,12 +23,13 @@ function FormRegisterSubComp() {
 
   const registerNewUser = async (e) => {
     e.preventDefault();
-
+  //  clear previous tokens
+  localStorage.removeItem('authTokenJWT');
     try {
       if (password !== confirmPassword) {
         return toast.warning("Passwords Must Match");
-      } else if (password.length < 12) {
-        return toast.warn("Password Must Be Of Atleast 12 Characters");
+      } else if (password.length < 8) {
+        return toast.warn("Password Must Be Of Atleast 8 Characters Including Spaces");
       } else if (age > 120) {
         return toast.warn("Please Enter A Valid Age");
       } else if (phone.length > 11 || phone.length < 11) {
@@ -51,9 +53,11 @@ function FormRegisterSubComp() {
           "Content-Type": "multipart/form-data",
         },
       });
+      passBool(false)
       const data = response.data;
       if (data.success === true) {
         toast.success(data.message);
+        toast.info(`${data.userDetails.fullName} Please login to continue`)
         console.log(data.message);
       }
 
@@ -69,6 +73,8 @@ function FormRegisterSubComp() {
       setConfirmPassword("");
       setProfileImage("");
       setShowImage("");
+
+    
     } catch (error) {
       console.log(`Error in Register: ${error}`);
       toast.error(error.response.data.message);
@@ -94,12 +100,6 @@ function FormRegisterSubComp() {
     }
   };
 
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handleSelect = (e) => {
-    setSelectedOption(e.target.value);
-    setIndustry(selectedOption);
-  };
   const degree = FamousDegreesInPakistan;
 
   return (
@@ -181,7 +181,7 @@ function FormRegisterSubComp() {
           <div className="mb-1">
             <label
               htmlFor="Phone"
-              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+              className="block text-sm font-medium text-gray-600  w-8 mr-2"
             >
               Phone
             </label>
@@ -200,15 +200,16 @@ function FormRegisterSubComp() {
             />
           </div>
         </div>
+        <div className="flex items-center justify-between ddd my-1">
         <div className="mb-1 ">
           <label
             htmlFor="gender"
-            className="flex text-sm font-medium text-gray-600 w-72 mr-32"
-          >
+            className="flex text-sm font-medium text-gray-600 w-8 mr-32"
+          >Gender </label>
             <select
               name="gender"
               id="gender"
-              className="mt-1 p-2 w-52 border rounded-md"
+              className="mt-1 p-2 w-48 border rounded-md mr-2"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
             >
@@ -218,13 +219,13 @@ function FormRegisterSubComp() {
               <option value="Female">Female</option>
               <option value="Prefer not to say">Prefer not to say</option>
             </select>
-          </label>
+         
         </div>
-        <div className="flex items-center justify-between ddd my-1">
+       
           <div className="mb-1">
             <label
               htmlFor="age"
-              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+              className="block text-sm font-medium text-gray-600  w-8 mr-2"
             >
               Age
             </label>
@@ -243,18 +244,20 @@ function FormRegisterSubComp() {
               }}
             />
           </div>
-
+          </div>
+        <div className="flex items-center justify-between ddd my-1">
+          
           <div className="mb-1">
             <label
               htmlFor="qualification"
-              className="block text-sm font-medium text-gray-600  w-48 mr-2"
+              className="block text-sm font-medium text-gray-600  w-8 mr-2"
             >
               Field
             </label>
             <select
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
-              className="mt-1 p-2 w-52 border rounded-md "
+              className="mt-1 p-2 w-48 border rounded-md mr-2"
             >
               <option value={null}>Select</option>
               {JobOptions.map((option) => (
@@ -264,9 +267,15 @@ function FormRegisterSubComp() {
               ))}
             </select>
           </div>
-        </div>
+       
 
         <div className="mb-1">
+        <label
+              htmlFor="qualification"
+              className="block text-sm font-medium text-gray-600  w-8 mr-2"
+            >
+               Qualification
+            </label>
           <select
             name="qualification"
             id="qualification"
@@ -274,7 +283,7 @@ function FormRegisterSubComp() {
             onChange={(e) => {
               setQualification(e.target.value);
             }}
-            className="mt-1 p-2 w-96 border rounded-md "
+            className="mt-1 p-2 w-48 border rounded-md "
           >
             <option value={null}>Select</option>
             {degree.map((e) => {
@@ -285,6 +294,7 @@ function FormRegisterSubComp() {
               );
             })}
           </select>
+        </div>
         </div>
 
         <div className="flex items-center justify-between ddd my-1">

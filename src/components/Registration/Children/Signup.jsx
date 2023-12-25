@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import FormRegisterSubComp from "./SubComps/SmRegisterSubComp";
 import SmSignInSubComp from "./SubComps/SmSignInSubComp";
 import SmContentSubComp from "./SubComps/SmContentSubComp";
+import Loader from "../../Loader/Loader";
 const Signup = () => {
   //toggle the slider
   const [sliderMain, setSliderMain] = useState("");
+  const [loaded, setLoad] = useState()
   const [bTL, setBTL] = useState(""); // border top left
   const [bTR, setBTR] = useState(""); // border top right
   const [bBL, setBBL] = useState(""); // border bottom left
@@ -42,6 +44,9 @@ const Signup = () => {
     e.target.style.borderBottom = "";
   };
 
+  const valueFromChild=(val)=>{
+    setLoad(val);
+  }
   return (
     <div>
       <br />
@@ -70,7 +75,11 @@ const Signup = () => {
         <br />
         <div className="container-main">
           <div className="left">
-            <FormRegisterSubComp />
+            {loaded?(<Loader/>):
+            <FormRegisterSubComp 
+            passBool={valueFromChild}
+            />
+          }
           </div>
 
           {/* LOGIN FORM  */}

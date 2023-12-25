@@ -1,5 +1,5 @@
 import React from 'react'
-import AhmadRazaKhokhar from '../../../../Assets/Ahmad_Raza_Khokhar_Brand_Logo-transformed.png'
+import AhmadRazaKhokhar from '../../../../Assets/Ahmad Raza Khokhar Brand Logo.jpg'
 
 function SmContentSubComp() {
   return (

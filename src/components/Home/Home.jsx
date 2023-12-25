@@ -10,21 +10,18 @@ import Main from "./Children/Main";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 
-
-
 const Home = () => {
   const [loaded, setLoaded] = useState(true);
 
   //Token verification
   const navigate = useNavigate();
-  
-  useEffect(()=>{
-    const token = localStorage.getItem('authTokenJWT');
-     if(!token){
-       navigate('/Register')
-     }
 
-  },[])
+  useEffect(() => {
+    const token = localStorage.getItem("authTokenJWT");
+    if (!token) {
+      navigate("/Register");
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,88 +45,91 @@ const Home = () => {
   const [leftImage, setLeftImage] = useState(car1);
   const [rightImage, setRightImage] = useState(car2);
 
-function changeImages(){ setInterval(()=>{
-
-    const p1 = new Promise((res, rej) => {
-      setInterval(function () {
-        if (leftImage === car1 && rightImage === car2) {
-          const a = setLeftImage(car3);
-          const b = setRightImage(car4);
-          res(a, b);
-        }
-      }, 8000);
-    }).then(
-      function(resolve){
+  function changeImages() {
+    setInterval(() => {
+      new Promise((res, rej) => {
         setInterval(function () {
-          if (leftImage === car3 && rightImage === car4) {
-            const a = setLeftImage(car5);
-            const b = setRightImage(car6);
-            resolve(a, b);
-          }
-        }, 8000);
-      }).then((res) => {
-        setInterval(function () {
-          if (leftImage === car5 && rightImage === car6) {
-            const a = setLeftImage(car1);
-            const b = setRightImage(car2);
+          if (leftImage === car1 && rightImage === car2) {
+            const a = setLeftImage(car3);
+            const b = setRightImage(car4);
             res(a, b);
           }
         }, 8000);
-      }).catch((error)=>{
-        console.log(error)
       })
-      }
-    )
-}
+        .then(function (resolve) {
+          setInterval(function () {
+            if (leftImage === car3 && rightImage === car4) {
+              const a = setLeftImage(car5);
+              const b = setRightImage(car6);
+              resolve(a, b);
+            }
+          }, 8000);
+        })
+        .then((res) => {
+          setInterval(function () {
+            if (leftImage === car5 && rightImage === car6) {
+              const a = setLeftImage(car1);
+              const b = setRightImage(car2);
+              res(a, b);
+            }
+          }, 8000);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+  }
 
-useEffect(()=>{const main = setInterval(()=>{changeImages(); return ()=>{clearInterval(main)} }, 2000); setLoaded(false);}, [])
-
-
+  useEffect(() => {
+    const main = setInterval(() => {
+      changeImages();
+      return () => {
+        clearInterval(main);
+      };
+    }, 2000);
+    setLoaded(false);
+  }, []);
 
   return (
     <>
-  {loaded?(
-  <Loader/>
-   ):
-    <div>
+      {loaded ? (
+        <Loader />
+      ) : (
+        <div>
+          <div></div>
+          <div>
+            <div className="title">
+              <h1
+                className="BrandTitle"
+                style={{ transform: "translateZ(100deg)" }}
+              >
+                M
+              </h1>
+              <h4 className="rem">ax</h4>&nbsp;&nbsp;
+              <h1 className="BrandTitle">G</h1>
+              <h4 className="rem">arage</h4>
+            </div>
+            <div className="cont">
+              <img
+                src={leftImage}
+                alt="Cars cars supra mk4 mk-4 supra 1994"
+                className="bg cc"
+                style={{ transition: "2s ease-in-out" }}
+              />
+              <img
+                src={rightImage}
+                alt="Cars cars supra mk4 mk-4 supra 1994"
+                className="bg sc"
+                style={{ transition: "2s ease-in-out" }}
+              />
+            </div>
+          </div>
 
-    
-    <div>
-    </div>
-      <div>
-        
-        <div className="title">
-          <h1
-            className="BrandTitle"
-            style={{ transform: "translateZ(100deg)" }}
-          >
-            M
-          </h1>
-          <h4 className="rem">ax</h4>&nbsp;&nbsp;
-          <h1 className="BrandTitle">G</h1>
-          <h4 className="rem">arage</h4>
+          <Main />
         </div>
-        <div className="cont">
-          <img
-            src={leftImage}
-            alt="Cars cars supra mk4 mk-4 supra 1994"
-            className="bg cc"
-            style={{ transition: "2s ease-in-out"}}
-          />
-          <img
-            src={rightImage}
-            alt="Cars cars supra mk4 mk-4 supra 1994"
-            className="bg sc"
-            style={{ transition: "2s ease-in-out"}}
-          />
-        </div>
-      </div>
-     
-      <Main/>
-      </div>
-      }
-      
+      )}
     </>
-)}
+  );
+};
 
 export default Home;

@@ -322,7 +322,7 @@ hr{
   position: absolute;
   background: rgb(32, 0, 75);
   margin-top: 45px;
-  height: 567px;
+  height: 559px;
   width: 38.1vw;
   color: #F5F1EE;
   border-bottom-right-radius: 155px;
@@ -330,7 +330,7 @@ hr{
   transition: 1s ease-in-out;
   padding: 12px;
   translate: -14px;
-  transform: translateY(-112px);
+  transform: translateY(-122px);
   box-shadow: 5px 5px 15px black;
 }
 .main-content{

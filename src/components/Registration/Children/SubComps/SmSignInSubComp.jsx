@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 function SmSignInSubComp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate()
   
     //logIn
     const logIn = async (e) => {
@@ -18,7 +21,7 @@ function SmSignInSubComp() {
         const data = response.data;
         console.log(data)
         if(data.success===true){
-          alert(data.message)
+            toast.success(data.message)
         }
          localStorage.setItem('authTokenJWT', data.token);
          const token = data.token;
@@ -29,11 +32,13 @@ function SmSignInSubComp() {
         console.log(decodedPayload);
 
         // clearing fields 
-        
+        setEmail(''); setPassword('')
+        navigate('/')
       } catch (error) {
         console.log(
           `There was an Error submitting the SignUp Form! ERROR 404: ${error}`
         );
+        toast.error(error.response.data.message);
       }
     };
 
@@ -96,7 +101,7 @@ function SmSignInSubComp() {
                 />
               </div>
               <div className="externalLogIn">
-                <button className=" w-60 rounded text-gray-500 border border-gray-400 hover:border-blue-400 hover:bg-blue-70 bg-white border-black-900 focus:ring focus:border-purple-900 px-4 py-2 my-2 flex justify-around items-center">
+                <button type='button' className="disabled w-60 rounded text-gray-500 border border-gray-400 hover:border-blue-400 hover:bg-blue-70 bg-white border-black-900 focus:ring focus:border-purple-900 px-4 py-2 my-2 flex justify-around items-center">
                   <img
                     src="/images/googleIcon.png"
                     alt="Login-with-google"
@@ -107,7 +112,7 @@ function SmSignInSubComp() {
                   Login With Google
                 </button>
 
-                <button className=" w-60 rounded text-gray-500 border border-gray-400 hover:border-blue-400 hover:bg-blue-70 bg-white border-black-900 focus:ring focus:border-purple-900 px-4 py-2 my-2 flex justify-around items-center">
+                <button type='button' className=" w-60 rounded text-gray-500 border border-gray-400 hover:border-blue-400 hover:bg-blue-70 bg-white border-black-900 focus:ring focus:border-purple-900 px-4 py-2 my-2 flex justify-around items-center">
                   <img
                     src="/images/facebookIcon.jpeg"
                     alt="Login-with-facebook"
