@@ -1,5 +1,5 @@
 import React from 'react'
-import p2p from '../../../../Assets/p2p.png'
+import AhmadRazaKhokhar from '../../../../Assets/Ahmad_Raza_Khokhar_Brand_Logo-transformed.png'
 
 function SmContentSubComp() {
   return (
@@ -16,7 +16,7 @@ function SmContentSubComp() {
                 MAX GARAGE
               </h1>
           <div className="flex justify-center items-center">
-          A Product of  <img src={p2p} alt="P2P Clouds Mian Ahmad Basit and Ahmad Raza Khokhar"/>
+          A Product of  <img src={AhmadRazaKhokhar} alt=" Ahmad Raza Khokhar Brand Logo" className='AhmadRazaKhokharBrandLogo'/>
             </div> 
               <div className="flex">
                 <span>Developed by</span>

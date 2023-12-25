@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import defaultProfile from "../../../../Assets/defaultImage.png";
-
-import axios, { AxiosError } from "axios";
+import { JobOptions, FamousDegreesInPakistan } from "./options";
+import axios from "axios";
 import { toast } from "react-toastify";
 
 function FormRegisterSubComp() {
@@ -9,11 +9,12 @@ function FormRegisterSubComp() {
   //Register
   const [fullName, setFullName] = useState("");
   const [profileImage, setProfileImage] = useState(null);
+  const [coverImage, setCoverImage] = useState(null);
   const [showImage, setShowImage] = useState(defaultProfile);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("Male");
   const [industry, setIndustry] = useState("");
   const [qualification, setQualification] = useState("");
   const [password, setPassword] = useState("");
@@ -36,6 +37,7 @@ function FormRegisterSubComp() {
       const formData = new FormData();
       formData.append("fullName", fullName);
       formData.append("profileImage", profileImage);
+      formData.append("coverImage", coverImage);
       formData.append("email", email);
       formData.append("phone", phone);
       formData.append("age", age);
@@ -54,10 +56,22 @@ function FormRegisterSubComp() {
         toast.success(data.message);
         console.log(data.message);
       }
+
+      //clearing the fields after submission
+      setFullName("");
+      setAge("");
+      setEmail("");
+      setPhone("");
+      setGender("");
+      setIndustry("");
+      setQualification("");
+      setPassword("");
+      setConfirmPassword("");
+      setProfileImage("");
+      setShowImage("");
     } catch (error) {
       console.log(`Error in Register: ${error}`);
       toast.error(error.response.data.message);
-
     }
   };
 
@@ -79,6 +93,14 @@ function FormRegisterSubComp() {
       toast.warning("Please select a valid image");
     }
   };
+
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleSelect = (e) => {
+    setSelectedOption(e.target.value);
+    setIndustry(selectedOption);
+  };
+  const degree = FamousDegreesInPakistan;
 
   return (
     <div>
@@ -183,61 +205,19 @@ function FormRegisterSubComp() {
             htmlFor="gender"
             className="flex text-sm font-medium text-gray-600 w-72 mr-32"
           >
-            <div className="flex w-40 justify-center items-center flex flex-row ">
-              <label
-                className="flex justify-center items-center w-32 my-1"
-                htmlFor="Male"
-              >
+            <select
+              name="gender"
+              id="gender"
+              className="mt-1 p-2 w-52 border rounded-md"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="Male" defaultChecked>
                 Male
-                <input
-                  required
-                  type="radio"
-                  id="Male"
-                  name="gender"
-                  className="mx-8 inline-flex w-4 justify-between align-center border rounded-md"
-                  value="Male"
-                  title="Male"
-                  onChange={(e) => {
-                    setGender(e.target.value);
-                  }}
-                  defaultChecked
-                />
-              </label>
-              <label className="flex justify-between w-18" htmlFor="Female">
-                Female
-                <input
-                  required
-                  type="radio"
-                  id="Female"
-                  name="gender"
-                  className="mx-8 inline-flex w-4 justify-between align-center border rounded-md"
-                  value="Female"
-                  title="Female"
-                  onChange={(e) => {
-                    setGender(e.target.value);
-                  }}
-                />
-              </label>
-              <label
-                className="flex justify-center items-center w-32 my-1"
-                htmlFor="Transgender"
-              >
-                Other
-                <input
-                  required
-                  type="radio"
-                  id="Transgender"
-                  name="gender"
-                  title="Other"
-                  className="mx-8 inline-flex w-4 justify-between align-center border rounded-md"
-                  autoComplete="on"
-                  value="Other"
-                  onChange={(e) => {
-                    setGender(e.target.value);
-                  }}
-                />
-              </label>
-            </div>
+              </option>
+              <option value="Female">Female</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
           </label>
         </div>
         <div className="flex items-center justify-between ddd my-1">
@@ -269,43 +249,42 @@ function FormRegisterSubComp() {
               htmlFor="qualification"
               className="block text-sm font-medium text-gray-600  w-48 mr-2"
             >
-              Qualification
+              Field
             </label>
-            <input
-              required
-              type="text"
-              id="qualification"
-              name="qualification"
-              className="mt-1 p-2 w-full border rounded-md"
-              autoComplete="on"
-              placeholder="Qualification"
-              value={qualification}
-              onChange={(e) => {
-                setQualification(e.target.value);
-              }}
-            />
+            <select
+              value={industry}
+              onChange={(e) => setIndustry(e.target.value)}
+              className="mt-1 p-2 w-52 border rounded-md "
+            >
+              <option value={null}>Select</option>
+              {JobOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
+
         <div className="mb-1">
-          <label
-            htmlFor="qualification"
-            className="block text-sm font-medium text-gray-600  w-48 mr-2"
-          >
-            Field
-          </label>
-          <input
-            required
-            type="text"
-            id="industry"
-            name="industry"
-            className="mt-1 p-2 w-96 border rounded-md"
-            autoComplete="on"
-            placeholder="Software Engineer, etc.,"
-            value={industry}
+          <select
+            name="qualification"
+            id="qualification"
+            value={qualification}
             onChange={(e) => {
-              setIndustry(e.target.value);
+              setQualification(e.target.value);
             }}
-          />
+            className="mt-1 p-2 w-96 border rounded-md "
+          >
+            <option value={null}>Select</option>
+            {degree.map((e) => {
+              return (
+                  <option key={e} value={e}>
+                    {e}
+                  </option>
+              );
+            })}
+          </select>
         </div>
 
         <div className="flex items-center justify-between ddd my-1">

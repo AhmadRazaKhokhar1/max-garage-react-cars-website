@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 
+
 function SmSignInSubComp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -22,11 +23,13 @@ function SmSignInSubComp() {
          localStorage.setItem('authTokenJWT', data.token);
          const token = data.token;
          
-        const isAdmin = data.userDetails.isAdmin;
+         //Token decoder
        const [header, payload, signature] = token.split('.');
        const decodedPayload = JSON.parse(atob(payload));
-        console.log(decodedPayload)
+        console.log(decodedPayload);
 
+        // clearing fields 
+        
       } catch (error) {
         console.log(
           `There was an Error submitting the SignUp Form! ERROR 404: ${error}`
@@ -34,7 +37,7 @@ function SmSignInSubComp() {
       }
     };
 
-    
+   
   return (
     <div>
        <form method="POST" className="leftForm" onSubmit={logIn}>
@@ -124,5 +127,6 @@ function SmSignInSubComp() {
     </div>
   )
 }
+    
 
 export default SmSignInSubComp
