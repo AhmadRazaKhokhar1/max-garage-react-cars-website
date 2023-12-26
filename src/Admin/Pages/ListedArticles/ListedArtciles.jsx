@@ -2,7 +2,7 @@ import React from 'react'
 
 function ListedArtciles() {
   return (
-    <div style={{minHeight:'50vh'}}>
+    <div className='pt-28 px-24 pr-5'>
       ListedS 
     </div>
   )

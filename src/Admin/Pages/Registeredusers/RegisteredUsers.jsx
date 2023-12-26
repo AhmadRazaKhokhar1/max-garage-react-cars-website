@@ -1,12 +1,11 @@
 import React from 'react'
 
-function DashBoard() {
+function RegisteredUsers() {
   return (
     <div className='pt-28 px-24 pr-5'>
-      DashBoard
-      
+      Rgistered Users
     </div>
   )
 }
 
-export default DashBoard
+export default RegisteredUsers

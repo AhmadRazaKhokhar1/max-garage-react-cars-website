@@ -1,12 +1,11 @@
 import React from 'react'
 
-function DashBoard() {
+function FeaturedProduct() {
   return (
     <div className='pt-28 px-24 pr-5'>
-      DashBoard
-      
+      Fearured Here
     </div>
   )
 }
 
-export default DashBoard
+export default FeaturedProduct

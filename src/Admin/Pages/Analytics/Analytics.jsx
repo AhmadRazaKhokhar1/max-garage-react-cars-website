@@ -2,7 +2,7 @@ import React from 'react'
 
 function Analytics() {
   return (
-    <div>
+    <div className='pt-28 px-24 pr-5'>
       Analytics
     </div>
   )

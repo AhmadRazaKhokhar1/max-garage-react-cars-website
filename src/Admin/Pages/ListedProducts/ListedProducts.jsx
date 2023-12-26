@@ -2,7 +2,7 @@ import React from 'react'
 
 function ListedProducts() {
   return (
-    <div>
+    <div className='pt-28 px-24 pr-5'>
       Listed Products
     </div>
   )

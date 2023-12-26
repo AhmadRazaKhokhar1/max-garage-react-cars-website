@@ -20,6 +20,9 @@ import ListedArticles from './Admin/Pages/ListedArticles/ListedArtciles.jsx';
 import EmployeeAttendance from './Admin/Pages/EmployeeAttendance/EmployeeAttendance.jsx';
 import Navbar from './Pages/Components/NavBar/Navbar.jsx';
 import Error from './Error.jsx';
+import RegisteredUsers from "./Admin/Pages/Registeredusers/RegisteredUsers.jsx";
+import FeaturedProduct from "./Admin/Pages/FeaturedProducts/FeaturedProduct.jsx";
+import ListedArtciles from "./Admin/Pages/ListedArticles/ListedArtciles.jsx";
 
 function App() {
   return (
@@ -53,6 +56,9 @@ function App() {
             <Route path="ListedProducts" element={<ListedProducts/> }/>
             <Route path="ListedArticles" element={<ListedArticles/> }/>
             <Route path="Analytics" element={<Analytics/> }/>
+            <Route path="RegisteredUsers" element={<RegisteredUsers/> }/>
+            <Route path="FeaturedProducts" element={<FeaturedProduct/> }/>
+            <Route path="ListedArticles" element={<ListedArtciles/> }/>
         </Route>
       </Routes>
     </>

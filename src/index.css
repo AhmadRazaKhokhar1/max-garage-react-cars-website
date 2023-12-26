@@ -587,14 +587,19 @@ hr{
 
 a{
   text-decoration: none;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 a:active{
   background: none;
 }
 
+
+
 /* footer  */
 footer{
   background:rgb(34, 0, 77);
+
 }
 
 

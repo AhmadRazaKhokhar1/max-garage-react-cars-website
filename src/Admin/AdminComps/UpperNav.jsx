@@ -9,8 +9,8 @@ function UpperNav() {
     <div>
       <div className="upperNavBar">
         <menu className="upperMenuBar">
-          <ul className="flex px-96 py-2 " style={{listStyle:'none'}}>
-            <NavLink style={{background:'none', listStyle:'none', all:'initial'}} to="AddProduct">
+          <ul className="flex px-96 py-2">
+            <NavLink style={{background:'none', all:'initial', listStyle:'none'}} to="AddProduct">
               <li className="iconsUpperNav">
                 <img
                   src={addProduct}

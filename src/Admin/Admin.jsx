@@ -1,31 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
-import { Outlet, Routes, Route, useNavigate } from "react-router-dom";
-// import Loader from '../Loader/Loader';
-import SideNav from "./AdminComps/SideNav";
+import SideNav from './AdminComps/SideNav'
 import UpperNav from "./AdminComps/UpperNav";
-import AddBlog from "./Pages/AddBlog";
+import { Outlet } from "react-router-dom";
+
 
 const Admin = () => {
-  const navigate = useNavigate();
-
-  const handleNavigate = (subPath) => {
-    navigate(`/admin${subPath}`);
-  };
 
   return (
     <>
     <div className="mainAdmin">
-      <div className="navsMainAdmin">
+      <div className="navsMainAdmin mt-0 fixed">
         <div className="upperNav  mt-16 ml-0 w-full fixed ">
           <UpperNav />
         </div>
         <div className="sideNav h-full flex flex-column mt-28 fixed ">
-          <SideNav handleNavigate={handleNavigate}/>
+          <SideNav/>
         </div>
       </div>
+      <Outlet/>
     </div>
-      <Outlet />
     </>
   );
 };

@@ -212,7 +212,7 @@ function FormRegisterSubComp({passBool}) {
               className="mt-1 p-2 w-48 border rounded-md mr-2"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-            >
+             >
               <option value="Male" defaultChecked>
                 Male
               </option>
