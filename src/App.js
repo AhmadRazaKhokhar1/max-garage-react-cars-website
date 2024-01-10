@@ -23,6 +23,7 @@ import Error from './Error.jsx';
 import RegisteredUsers from "./Admin/Pages/Registeredusers/RegisteredUsers.jsx";
 import FeaturedProduct from "./Admin/Pages/FeaturedProducts/FeaturedProduct.jsx";
 import ListedArtciles from "./Admin/Pages/ListedArticles/ListedArtciles.jsx";
+import TestFBpost from "./TestFBpost.jsx";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/Register" element={<Registration/> } />
 
           <Route path="*" element={<Error/> } />
+          <Route path="/adCampaign" element={<TestFBpost/>}/>
 
         {/* //nested routes  */}
         <Route path="/Admin" element={<Admin/> }>
