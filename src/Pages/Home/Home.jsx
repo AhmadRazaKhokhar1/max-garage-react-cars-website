@@ -10,6 +10,7 @@ import Main from "./Children/Main";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import Footer from "../Components/Footer/Footer";
+import TextEditor from "../Components/TextEditor/TextEditor";
 
 const Home = () => {
   const [loaded, setLoaded] = useState(true);
@@ -127,6 +128,9 @@ const Home = () => {
           </div>
 
           <Main />
+          <br />
+          {/* <TextEditor/> */}
+          <br />
         </div>
       )}
        <Footer/>

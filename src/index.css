@@ -594,7 +594,12 @@ a:active{
   background: none;
 }
 
+/* TEXT EDITOR STYLES  */
 
+.Editor{
+width: 85vw;
+margin: auto;
+}
 
 /* footer  */
 footer{
